@@ -26,14 +26,17 @@ const App = () => {
         screenOptions={{
           tabBarActiveTintColor: "#e91e63",
           headerShown: false,
-          tabBarLabel:""
+          tabBarLabel: "",
+          tabBarActiveBackgroundColor: "#e91e63"
+          
+          
         }}
       >
         <Tab.Screen
           name="DashboardScreen"
           component={DashboardScreen}
           options={{
-            tabBarLabel: "DashboardScreen",
+           
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faHome} color={color} size={size} /> 
             ),
@@ -43,7 +46,7 @@ const App = () => {
           name="CalenderScreen"
           component={CalenderScreen}
           options={{
-            tabBarLabel: "CalenderScreen",
+          
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faCalendar} color={color} size={size} /> 
             )
@@ -53,7 +56,7 @@ const App = () => {
           name="ExploreScreen"
           component={ExploreScreen}
           options={{
-            tabBarLabel: "ExploreScreen",
+           
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faSearch} color={color} size={size} />
             ),
@@ -63,7 +66,7 @@ const App = () => {
           name="ChatScreen"
           component={ChatScreen}
           options={{
-            tabBarLabel: "ChatScreen",
+           
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faMessage} color={color} size={size} /> // Use the correct icon
             )
@@ -75,7 +78,7 @@ const App = () => {
           name="UserScreen"
           component={UserScreen}
           options={{
-            tabBarLabel: "UserScreen",
+           
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faUser} color={color} size={size} /> // Use the correct icon
             ),

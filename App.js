@@ -1,15 +1,12 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTabNavigator from "./components/BottomTabNavigator";
-import commonStyles from "../styles/commonStyles"; // Import commonStyles
-
 import { View } from "react-native";
+import BottomTabNavigator from "./components/BottomTabNavigator";
+import styles from "./styles/commonStyles";
 
 const App = () => {
   return (
-    <View style={commonStyles.container}>
-      {" "}
-      {/* Use commonStyles for styling */}
+    <View style={styles.container}>
       <NavigationContainer>
         <BottomTabNavigator />
       </NavigationContainer>

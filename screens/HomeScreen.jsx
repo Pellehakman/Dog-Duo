@@ -1,48 +1,79 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Dimensions,
+  ScrollView,
+} from "react-native";
 import bg from "../assets/bg.webp";
-import styles from '../styles/commonStyles';
+import styles from "../styles/commonStyles";
 
 const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
   return (
-    <ScrollView contentContainerStyle={styles.scrollViewContainer}>
-      <Image
-        style={{
-          resizeMode: "cover",
-          width: width,
-          height: height,
-        }}
-        source={bg}
-      />
-      <View style={styles.overlay}>
-        <Text style={styles.textHeading2XL}>Welcome to this site</Text>
-      </View>
-      <View style={styles.mainWrapper}>
-        <View style={styles.main}>
-          <View style={styles.news}>
-            <Text style={styles.textHeadingXL}>Main Content</Text>
-            <Text style={styles.textBody}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              quas, exercitationem ad ullam aut nisi nihil provident laborum
-              sapiente laboriosam veniam impedit eos placeat facere rem, dicta
-              rerum doloremque. Doloribus.
-            </Text>
-          </View>
+    <View style={styles.container}>
+      {/* Background Image */}
+      <Image style={styles.backgroundImage} source={bg} />
 
-          <View style={styles.dashboard}>
-            <Text style={styles.textHeadingXL}>Dashboard</Text>
-            <Text style={styles.textBody}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              quas, exercitationem ad ullam aut nisi nihil provident laborum
-              sapiente laboriosam veniam impedit eos placeat facere rem, dicta
-              rerum doloremque. Doloribus.
-            </Text>
+      <View style={styles.headingContainer}>
+        <Text style={styles.textHeading2XL}>Välkommen tillbaka</Text>
+      </View>
+      <ScrollView
+        contentContainerStyle={styles.scrollViewContainer}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.mainWrapper}>
+          <View style={styles.main}>
+            <View style={styles.newsContainer}>
+              <Text style={styles.textHeadingXL}>Main Content</Text>
+              <Text style={styles.textBody}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione quas, exercitationem ad ullam aut nisi nihil provident
+                laborum sapiente.
+              </Text>
+            </View>
+
+            <View style={styles.dashboardContainer}>
+              <View style={styles.dashboardItemContainer}>
+                <Text style={styles.textHeadingXLBlack}>Kommande</Text>
+                <ScrollView
+                  contentContainerStyle={styles.dashboardContainer}
+                  horizontal // Enable horizontal scrolling for dashboard items
+                >
+                  <View style={styles.dashboardItem}>
+                    <Text style={styles.textBodyBlack}>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ratione quas, exercitationem ad ullam aut nisi nihil
+                      provident
+                    </Text>
+                  </View>
+                  <View style={styles.dashboardItem}>
+                    <Text style={styles.textBodyBlack}>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ratione quas, exercitationem ad ullam aut nisi nihil
+                      provident
+                    </Text>
+                  </View>
+                </ScrollView>
+              </View>
+              <View style={styles.dashboardItemContainer}>
+                <Text style={styles.textHeadingXLBlack}>Kommande</Text>
+                <View style={styles.dashboardItem}>
+                  <Text style={styles.textBodyBlack}>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ratione quas, exercitationem ad ullam aut nisi nihil
+                    provident
+                  </Text>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 

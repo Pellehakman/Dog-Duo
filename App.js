@@ -1,27 +1,20 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import BottomTabNavigator from "./components/BottomTabNavigator";
+import commonStyles from "../styles/commonStyles"; // Import commonStyles
 
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 
 const App = () => {
   return (
-    <View style={styles.root}>
-      <NavigationContainer style={styles.text}>
+    <View style={commonStyles.container}>
+      {" "}
+      {/* Use commonStyles for styling */}
+      <NavigationContainer>
         <BottomTabNavigator />
       </NavigationContainer>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    fontFamily: "Sofia Sans",
-  },
-  text: {
-    fontFamily: "Sofia Sans",
-  },
-});
 
 export default App;

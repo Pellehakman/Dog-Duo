@@ -7,7 +7,8 @@ const DashboardScreen = ({ navigation }) => {
   return (
     <View>
       <Text>Home Screedn</Text>
-      <FontAwesomeIcon icon={ faMugSaucer } />
+     
+      <img src="https://m.media-amazon.com/images/I/81wDUoCud8L._AC_UF1000,1000_QL80_.jpg" alt="" srcset="" />
     
     </View>
   );

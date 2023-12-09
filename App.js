@@ -1,9 +1,11 @@
 import React from "react";
+import { View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+
 import {
-  faHome, // Changed from faCalendar to faHome
+  faHome,
   faUser,
   faMessage,
   faSearch,
@@ -19,26 +21,31 @@ import CalenderScreen from "./screens/CalenderScreen";
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  const iconWrapperStyle = (focused) => ({
+    backgroundColor: focused ? "#e91e63" : "", // Set your desired active and inactive background colors
+    borderRadius: 15, // Set your desired border radius
+    padding: 10, // Adjust padding as needed
+  });
+
   return (
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Feed"
-        screenOptions={{
-          tabBarActiveTintColor: "#e91e63",
+        screenOptions={({ route }) => ({
+        
           headerShown: false,
           tabBarLabel: "",
-          tabBarActiveBackgroundColor: "#e91e63"
-          
-          
-        }}
+       
+        })}
       >
         <Tab.Screen
           name="DashboardScreen"
           component={DashboardScreen}
           options={{
-           
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faHome} color={color} size={size} /> 
+            tabBarIcon: ({ size, focused }) => (
+              <View style={iconWrapperStyle(focused)}>
+                <FontAwesomeIcon icon={faHome} color={focused ? 'white' : 'black'} size={size} />
+              </View>
             ),
           }}
         />
@@ -46,41 +53,44 @@ const App = () => {
           name="CalenderScreen"
           component={CalenderScreen}
           options={{
-          
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faCalendar} color={color} size={size} /> 
-            )
+            tabBarIcon: ({ size, focused }) => (
+              <View style={iconWrapperStyle(focused)}>
+                <FontAwesomeIcon icon={faCalendar} color={focused ? 'white' : 'black'} size={size} />
+              </View>
+            ),
           }}
         />
         <Tab.Screen
           name="ExploreScreen"
           component={ExploreScreen}
           options={{
-           
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faSearch} color={color} size={size} />
+            tabBarIcon: ({ size, focused }) => (
+              <View style={iconWrapperStyle(focused)}>
+                <FontAwesomeIcon icon={faSearch} color={focused ? 'white' : 'black'} size={size} />
+              </View>
             ),
           }}
         />
-         <Tab.Screen
+        <Tab.Screen
           name="ChatScreen"
           component={ChatScreen}
           options={{
-           
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faMessage} color={color} size={size} /> // Use the correct icon
-            )
-            ,
+            tabBarIcon: ({ size, focused }) => (
+              <View style={iconWrapperStyle(focused)}>
+                <FontAwesomeIcon icon={faMessage} color={focused ? 'white' : 'black'} size={size} />
+              </View>
+            ),
             tabBarBadge: 6,
           }}
         />
-         <Tab.Screen
+        <Tab.Screen
           name="UserScreen"
           component={UserScreen}
           options={{
-           
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faUser} color={color} size={size} /> // Use the correct icon
+            tabBarIcon: ({ color, size, focused }) => (
+              <View style={iconWrapperStyle(focused)}>
+                <FontAwesomeIcon icon={faUser} color={focused ? 'white' : 'black'} size={size} />
+              </View>
             ),
           }}
         />

@@ -26,34 +26,56 @@ const App = () => {
         screenOptions={{
           tabBarActiveTintColor: "#e91e63",
           headerShown: false,
+          tabBarLabel:""
         }}
       >
         <Tab.Screen
-          name="Feed"
+          name="DashboardScreen"
           component={DashboardScreen}
           options={{
-            tabBarLabel: "Home",
+            tabBarLabel: "DashboardScreen",
             tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faHome} color={color} size={size} /> // Changed from faCalendar to faHome
+              <FontAwesomeIcon icon={faHome} color={color} size={size} /> 
             ),
           }}
         />
         <Tab.Screen
-          name="Notifications"
-          component={UserScreen}
+          name="CalenderScreen"
+          component={CalenderScreen}
           options={{
-            tabBarLabel: "Updates",
+            tabBarLabel: "CalenderScreen",
             tabBarIcon: ({ color, size }) => (
-              <FontAwesomeIcon icon={faMessage} color={color} size={size} /> // Use the correct icon
-            ),
-            tabBarBadge: 1,
+              <FontAwesomeIcon icon={faCalendar} color={color} size={size} /> 
+            )
           }}
         />
         <Tab.Screen
-          name="Profile"
+          name="ExploreScreen"
+          component={ExploreScreen}
+          options={{
+            tabBarLabel: "ExploreScreen",
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesomeIcon icon={faSearch} color={color} size={size} />
+            ),
+          }}
+        />
+         <Tab.Screen
+          name="ChatScreen"
           component={ChatScreen}
           options={{
-            tabBarLabel: "Profile",
+            tabBarLabel: "ChatScreen",
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesomeIcon icon={faMessage} color={color} size={size} /> // Use the correct icon
+            )
+            ,
+            tabBarBadge: 6,
+          }}
+        />
+         <Tab.Screen
+          name="UserScreen"
+          component={UserScreen}
+          options={{
+            tabBarLabel: "UserScreen",
             tabBarIcon: ({ color, size }) => (
               <FontAwesomeIcon icon={faUser} color={color} size={size} /> // Use the correct icon
             ),

@@ -1,4 +1,5 @@
 import React from "react";
+import Dashboard from "../components/dashboard/Dashboard";
 import {
   View,
   Text,
@@ -28,48 +29,14 @@ const HomeScreen = () => {
         <View style={styles.mainWrapper}>
           <View style={styles.main}>
             <View style={styles.newsContainer}>
-              <Text style={styles.textHeadingXL}>Main Content</Text>
+              <Text style={styles.textHeadingXL}>Main Confent</Text>
               <Text style={styles.textBody}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Ratione quas, exercitationem ad ullam aut nisi nihil provident
                 laborum sapiente.
               </Text>
             </View>
-
-            <View style={styles.dashboardContainer}>
-              <View style={styles.dashboardItemContainer}>
-                <Text style={styles.textHeadingXLBlack}>Kommande</Text>
-                <ScrollView
-                  contentContainerStyle={styles.dashboardContainer}
-                  horizontal // Enable horizontal scrolling for dashboard items
-                >
-                  <View style={styles.dashboardItem}>
-                    <Text style={styles.textBodyBlack}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ratione quas, exercitationem ad ullam aut nisi nihil
-                      provident
-                    </Text>
-                  </View>
-                  <View style={styles.dashboardItem}>
-                    <Text style={styles.textBodyBlack}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ratione quas, exercitationem ad ullam aut nisi nihil
-                      provident
-                    </Text>
-                  </View>
-                </ScrollView>
-              </View>
-              <View style={styles.dashboardItemContainer}>
-                <Text style={styles.textHeadingXLBlack}>Kommande</Text>
-                <View style={styles.dashboardItem}>
-                  <Text style={styles.textBodyBlack}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ratione quas, exercitationem ad ullam aut nisi nihil
-                    provident
-                  </Text>
-                </View>
-              </View>
-            </View>
+            <Dashboard />
           </View>
         </View>
       </ScrollView>

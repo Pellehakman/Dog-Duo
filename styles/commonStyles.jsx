@@ -46,8 +46,6 @@ export default StyleSheet.create({
     fontWeight: "400",
   },
   headingContainer: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
     paddingTop: 32,
     paddingHorizontal: 32,
   },
@@ -69,20 +67,20 @@ export default StyleSheet.create({
   },
   mainWrapper: {
     flexGrow: 1,
-    backgroundColor: '#F3F3F3',
+    backgroundColor: "#F3F3F3",
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
-    position: "absolute",
+    
     width: width,
-    height: height,
+
     display: "flex",
     justifyContent: "center",
-    top: height / 2.5,
+    
   },
   main: {
     flexGrow: 1,
     padding: 24,
-    top: -56,
+    
     position: "absolute",
     gap: 16,
   },

@@ -10,36 +10,22 @@ import {
 } from "react-native";
 import bg from "../assets/bg.webp";
 import styles from "../styles/commonStyles";
+import News from "../components/news/News";
 
 const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      {/* Background Image */}
       <Image style={styles.backgroundImage} source={bg} />
 
       <View style={styles.headingContainer}>
         <Text style={styles.textHeading2XL}>Välkommen tillbaka</Text>
       </View>
-      <ScrollView
-        contentContainerStyle={styles.scrollViewContainer}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={styles.mainWrapper}>
-          <View style={styles.main}>
-            <View style={styles.newsContainer}>
-              <Text style={styles.textHeadingXL}>Main Confent</Text>
-              <Text style={styles.textBody}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione quas, exercitationem ad ullam aut nisi nihil provident
-                laborum sapiente.
-              </Text>
-            </View>
-            <Dashboard />
-          </View>
-        </View>
-      </ScrollView>
+      <News />
+      
+        <Dashboard />
+     
     </View>
   );
 };

@@ -16,7 +16,7 @@ const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
   return (
-    <View style={globalStyles.container}>
+    <View>
       <Image style={globalStyles.backgroundImage} source={bg} />
 
       <View style={globalStyles.headingContainer}>

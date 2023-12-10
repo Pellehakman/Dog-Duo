@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 const ExploreScreen = () => {
   return (
     <View>
-      <Text>Details Screen</Text>
+     <Button>hej</Button>
     </View>
   );
 };

@@ -5,33 +5,33 @@ const { width, height } = Dimensions.get("window");
 
 const Dashboard = () => {
   return (
-    <View style={localStyles.dashboardWrapper}>
-      <View style={globalStyles.headingXLContainer}>
-        <Text style={globalStyles.H2}>Dashboard</Text>
-      </View>
-      <ScrollView
-        contentContainerStyle={globalStyles.scrollViewContainer}
-        showsVerticalScrollIndicator={false}
-      >
+    <ScrollView
+      contentContainerStyle={localStyles.scrollViewContainer}
+      showsVerticalScrollIndicator={false}
+    >
+      <View style={localStyles.dashboardWrapper}>
+        <View style={globalStyles.headingXLContainer}>
+          <Text style={globalStyles.H2}>Översikt</Text>
+        </View>
         <View style={localStyles.dashboardContainer}>
           <View style={globalStyles.headingXLContainer}>
-            <Text style={globalStyles.H3}>Kommande</Text>
+            <Text style={globalStyles.H3}>Kommande aktiviteter</Text>
           </View>
           <ScrollView
-            contentContainerStyle={{ width: "100%", flexDirection: "row" }}
+            contentContainerStyle={localStyles.horizontalScrollView}
             horizontal
             showsHorizontalScrollIndicator={false}
           >
             <View style={localStyles.dashboardItem}>
               <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Soluta libero totan.
               </Text>
             </View>
             <View style={localStyles.dashboardItem}>
               <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Soluta libero totan.
               </Text>
             </View>
             <View style={localStyles.dashboardItem}>
@@ -41,20 +41,31 @@ const Dashboard = () => {
               </Text>
             </View>
           </ScrollView>
+          
         </View>
-      </ScrollView>
-    </View>
+        
+        
+      </View>
+    </ScrollView>
   );
 };
 
 const localStyles = StyleSheet.create({
-  dashboardContainer: {
-    width: width,
+  scrollViewContainer: {
+    flexGrow: 1,
   },
-
+  dashboardContainer: {
+    paddingBottom: height, // Adjust this value as needed
+  },
+  horizontalScrollView: {
+    paddingVertical: 12,
+  },
   dashboardWrapper: {
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
+    height: 240,
+    paddingVertical: 12,
+
+    flexDirection: "column",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
   },
   dashboardItem: {
     marginLeft: 24,

@@ -3,15 +3,7 @@ import { StyleSheet, Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    position: "relative",
-  },
-  scrollViewContainer: {
-    flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+  scrollViewContainer: {},
   scrollXview: {},
   H1: {
     fontSize: 48,
@@ -24,7 +16,7 @@ export default StyleSheet.create({
     color: "white",
     fontFamily: "Sofia Sans",
     fontWeight: "900",
-    },
+  },
   H3: {
     fontSize: 26,
     color: "white",
@@ -58,7 +50,10 @@ export default StyleSheet.create({
   headingXLContainer: {
     paddingHorizontal: 32,
   },
-
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0, 0, 0, 0.4)", // Adjust the alpha value for the desired transparency
+  },
   backgroundImage: {
     position: "absolute",
     top: 0,

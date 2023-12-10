@@ -10,8 +10,14 @@ const News = () => {
       <Text style={globalStyles.textBody}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Text>
-      <View>
-        <Pressable onPress={() => {}}>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Pressable style={styling.button} onPress={() => {}}>
           <Text style={styling.text}>{title}</Text>
         </Pressable>
       </View>
@@ -33,25 +39,20 @@ const styling = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    position: "relative",
   },
   button: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 12,
+    paddingVertical: 8,
     paddingHorizontal: 32,
-    width: "auto", // Set width to auto to adjust based on content
-    height: "auto", // Set height to auto to adjust based on content
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: "black",
+
+    backgroundColor: "white", // Set the border color to white
   },
   text: {
     fontSize: 16,
-    lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "white",
+    color: "#e91e63",
   },
 });
 

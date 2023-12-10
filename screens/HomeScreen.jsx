@@ -23,9 +23,7 @@ const HomeScreen = () => {
         <Text style={styles.textHeading2XL}>Välkommen tillbaka</Text>
       </View>
       <News />
-      
-        <Dashboard />
-     
+      <Dashboard />
     </View>
   );
 };

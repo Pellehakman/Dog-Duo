@@ -6,8 +6,7 @@ const News = () => {
     <View style={styling.newsContainer}>
       <Text style={styles.textHeadingXL}>Nyheter</Text>
       <Text style={styles.textBody}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quas,
-        exercitationem ad ullam aut nisi nihil provident laborum sapiente.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
       </Text>
     </View>
   );

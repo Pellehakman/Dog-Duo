@@ -12,6 +12,9 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  scrollXview: {
+
+  },
   textHeading2XL: {
     fontSize: 38,
     color: "white",
@@ -30,9 +33,9 @@ export default StyleSheet.create({
     color: "black",
     fontFamily: "Sofia Sans",
     fontWeight: "900",
-    marginVertical: 8,
+    paddingHorizontal: 24,
+    paddingTop: 24,
   },
-
   textBody: {
     fontSize: 16,
     color: "white",
@@ -49,41 +52,7 @@ export default StyleSheet.create({
     paddingTop: 32,
     paddingHorizontal: 32,
   },
-  newsContainer: {
-    flexGrow: 1,
-    padding: 24,
-    borderRadius: 12,
-    backgroundColor: "#e91e63",
-    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-  },
-  dashboardContainer: {
-    flexGrow: 1,
-  },
-  dashboardItemContainer: {},
-  dashboardItem: {
-    padding: 24,
-    backgroundColor: "white",
-    borderRadius: 12,
-  },
-  mainWrapper: {
-    flexGrow: 1,
-    backgroundColor: "#F3F3F3",
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
-    
-    width: width,
 
-    display: "flex",
-    justifyContent: "center",
-    
-  },
-  main: {
-    flexGrow: 1,
-    padding: 24,
-    
-    position: "absolute",
-    gap: 16,
-  },
   backgroundImage: {
     position: "absolute",
     top: 0,

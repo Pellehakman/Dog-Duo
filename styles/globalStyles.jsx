@@ -12,21 +12,24 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  scrollXview: {
-
-  },
-  textHeading2XL: {
-    fontSize: 38,
+  scrollXview: {},
+  H1: {
+    fontSize: 48,
     color: "white",
     fontFamily: "Sofia Sans",
     fontWeight: "900",
   },
-  textHeadingXL: {
+  H2: {
+    fontSize: 32,
+    color: "white",
+    fontFamily: "Sofia Sans",
+    fontWeight: "900",
+    },
+  H3: {
     fontSize: 26,
     color: "white",
     fontFamily: "Sofia Sans",
     fontWeight: "900",
-    marginBottom: 8,
   },
   textHeadingXLBlack: {
     fontSize: 20,
@@ -50,6 +53,9 @@ export default StyleSheet.create({
   },
   headingContainer: {
     paddingTop: 32,
+    paddingHorizontal: 32,
+  },
+  headingXLContainer: {
     paddingHorizontal: 32,
   },
 

@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { View } from "react-native";
 import BottomTabNavigator from "./components/BottomTabNavigator";
-import styles from "./styles/commonStyles";
+import styles from "./styles/globalStyles";
 
 const App = () => {
   return (

@@ -1,4 +1,4 @@
-import globalStyles from "../../styles/commonStyles";
+import globalStyles from "../../styles/globalStyles";
 import { View, Text, ScrollView, StyleSheet, Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get("window");
@@ -6,12 +6,17 @@ const { width, height } = Dimensions.get("window");
 const Dashboard = () => {
   return (
     <View style={localStyles.dashboardWrapper}>
+      <View style={globalStyles.headingXLContainer}>
+        <Text style={globalStyles.H2}>Dashboard</Text>
+      </View>
       <ScrollView
         contentContainerStyle={globalStyles.scrollViewContainer}
         showsVerticalScrollIndicator={false}
       >
         <View style={localStyles.dashboardContainer}>
-          <Text style={globalStyles.textHeadingXLBlack}>Kommande</Text>
+          <View style={globalStyles.headingXLContainer}>
+            <Text style={globalStyles.H3}>Kommande</Text>
+          </View>
           <ScrollView
             contentContainerStyle={{ width: "100%", flexDirection: "row" }}
             horizontal
@@ -31,35 +36,8 @@ const Dashboard = () => {
             </View>
             <View style={localStyles.dashboardItem}>
               <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
-              </Text>
-            </View>
-          </ScrollView>
-        </View>
-        <View style={localStyles.dashboardContainer}>
-          <Text style={globalStyles.textHeadingXLBlack}>Kommande</Text>
-          <ScrollView
-            contentContainerStyle={{ width: "100%", flexDirection: "row" }}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-          >
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
-              </Text>
-            </View>
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
-              </Text>
-            </View>
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-                libero totan.
+                Lorddem ipsum dolor sit amet consectetur, adipisicing elit.
+                Soluta libero totan.
               </Text>
             </View>
           </ScrollView>
@@ -75,11 +53,11 @@ const localStyles = StyleSheet.create({
   },
 
   dashboardWrapper: {
-    backgroundColor: "#F3F3F3",
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
   },
   dashboardItem: {
+    marginLeft: 24,
     padding: 24,
     marginVertical: 24,
     backgroundColor: "white",

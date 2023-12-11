@@ -28,3 +28,11 @@
           </ScrollView>
           
         </View>
+
+         <View>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+            itaque, reiciendis ut ad illum neque cum quidem fuga? Ducimus amet
+            modi illo ad maxime sit eveniet dolore voluptatibus ex perspiciatis!
+          </Text>
+        </View>

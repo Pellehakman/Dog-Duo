@@ -1,5 +1,6 @@
 import globalStyles from "../../styles/globalStyles";
 import { View, Text, ScrollView, StyleSheet, Dimensions } from "react-native";
+import DashboardItem from "./DashboardItem";
 
 const { width, height } = Dimensions.get("window");
 
@@ -9,10 +10,7 @@ const Dashboard = () => {
       contentContainerStyle={localStyles.scrollViewContainer}
       showsVerticalScrollIndicator={false}
     >
-      <View style={localStyles.dashboardWrapper}>
-        <View style={globalStyles.headingXLContainer}>
-          <Text style={globalStyles.H2}>Översikt</Text>
-        </View>
+      {/* <View style={localStyles.dashboardWrapper}>
         <View style={localStyles.dashboardContainer}>
           <View style={globalStyles.headingXLContainer}>
             <Text style={globalStyles.H3}>Kommande aktiviteter</Text>
@@ -22,38 +20,24 @@ const Dashboard = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
           >
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta libero totan.
-              </Text>
-            </View>
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta libero totan.
-              </Text>
-            </View>
-            <View style={localStyles.dashboardItem}>
-              <Text style={globalStyles.textBodyBlack}>
-                Lorddem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta libero totan.
-              </Text>
-            </View>
+            <DashboardItem />
+            <DashboardItem />
           </ScrollView>
-          
         </View>
         
-        
+      </View> */}
+      <View>
+        <Text>hej</Text>
+      </View>
+      <View>
+        <Text>hej</Text>
       </View>
     </ScrollView>
   );
 };
 
 const localStyles = StyleSheet.create({
-  scrollViewContainer: {
-    flexGrow: 1,
-  },
+  scrollViewContainer: {},
   dashboardContainer: {
     paddingBottom: height, // Adjust this value as needed
   },
@@ -61,26 +45,10 @@ const localStyles = StyleSheet.create({
     paddingVertical: 12,
   },
   dashboardWrapper: {
-    height: 240,
     paddingVertical: 12,
+    display: "flex",
 
     flexDirection: "column",
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
-  },
-  dashboardItem: {
-    marginLeft: 24,
-    padding: 24,
-    marginVertical: 24,
-    backgroundColor: "white",
-    borderRadius: 12,
-    width: width / 1.5,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 12,
   },
 });
 

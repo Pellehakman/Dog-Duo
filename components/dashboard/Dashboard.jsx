@@ -1,32 +1,41 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet, Dimensions } from "react-native";
 import DashboardItem from "./DashboardItem";
+import globalStyles from "../../styles/globalStyles";
 
 const { height } = Dimensions.get("window");
 
 const Dashboard = () => {
   // Dummy data for illustration purposes
-  const items = Array.from({ length: 20 }, (_, index) => `Item ${index + 1}`);
+  const items = Array.from({ length: 3 }, (_, index) => `Item ${index + 1}`);
 
   return (
-    <ScrollView contentContainerStyle={styles.dashboard}>
+    <ScrollView contentContainerStyle={localStyles.dashboard}>
       {items.map((item, index) => (
-        <View key={index} style={styles.item}>
-          <Text>{item}</Text>
+        <View key={index}>
+          <View style={globalStyles.headingXLContainer}>
+            <Text style={globalStyles.H3}>Kommande aktiviteter</Text>
+          </View>
+          <ScrollView
+            contentContainerStyle={localStyles.dashboard}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+          >
+            <DashboardItem />
+            <DashboardItem />
+          </ScrollView>
         </View>
       ))}
     </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
+const localStyles = StyleSheet.create({
   dashboard: {
     flexGrow: 1,
   },
   item: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    backgroundColor: "red",
   },
 });
 

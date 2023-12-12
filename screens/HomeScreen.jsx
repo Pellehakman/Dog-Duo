@@ -1,22 +1,13 @@
 import React from "react";
 import Dashboard from "../components/dashboard/Dashboard";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  Dimensions,
-  ScrollView,
-} from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import bg from "../assets/bg.webp";
 import globalStyles from "../styles/globalStyles";
 import News from "../components/news/News";
 
-const { width, height } = Dimensions.get("window");
-
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <View style={globalStyles.container}>
       <Image style={globalStyles.backgroundImage} source={bg} />
 
       <View style={globalStyles.headingContainer}>
@@ -30,11 +21,5 @@ const HomeScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default HomeScreen;

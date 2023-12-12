@@ -1,11 +1,26 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text, Dimensions } from "react-native";
+import globalStyles from "../styles/globalStyles";
+import { Calendar } from "react-native-calendars";
+
+const { width, height } = Dimensions.get("window");
 
 const CalenderScreen = () => {
   return (
-    <View>
-      <Text>CalenderScreen</Text>
-      <img src="https://marinfritid.com/app/uploads/2020/08/PHO_BIKE_90_RE_exc-250-my23-90-right_SALL_AEPI_V1.png" alt=""  />
+    <View style={globalStyles.container}>
+      <View style={globalStyles.headingContainer}>
+        <Text style={[globalStyles.H1, { color: "black" }]}>Kalender</Text>
+      </View>
+      <Calendar
+        style={{ flex: 1 }}
+        // Customize calendar props as needed
+        // For example:
+        markedDates={{
+          "2023-01-01": { selected: true, marked: true, selectedColor: "blue" },
+          "2023-01-15": { marked: true, dotColor: "red" },
+          // Add more marked dates as needed
+        }}
+      />
     </View>
   );
 };

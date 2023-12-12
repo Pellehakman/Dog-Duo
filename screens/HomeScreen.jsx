@@ -16,7 +16,7 @@ const { width, height } = Dimensions.get("window");
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image style={globalStyles.backgroundImage} source={bg} />
 
       <View style={globalStyles.headingContainer}>
@@ -27,5 +27,11 @@ const HomeScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default HomeScreen;

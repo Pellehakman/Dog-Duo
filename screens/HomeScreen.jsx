@@ -23,6 +23,9 @@ const HomeScreen = () => {
         <Text style={globalStyles.H1}>Välkommen tillbaka</Text>
       </View>
       <News />
+      <View style={globalStyles.headingXLContainer}>
+        <Text style={globalStyles.H2}>Översikt</Text>
+      </View>
       <Dashboard />
     </View>
   );

@@ -31,7 +31,7 @@ const styling = StyleSheet.create({
     margin: 24,
     padding: 24,
     borderRadius: 12,
-    backgroundColor: "#e91e63",
+    backgroundColor: "#FFC700",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -51,8 +51,7 @@ const styling = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: "bold",
-    letterSpacing: 0.25,
-    color: "#e91e63",
+    color: "#FFC700",
   },
 });
 

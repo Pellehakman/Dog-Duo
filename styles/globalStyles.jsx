@@ -5,6 +5,7 @@ const { width, height } = Dimensions.get("window");
 export default StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#F3F3F3"
   },
   scrollViewContainer: {},
   scrollXview: {},
@@ -55,7 +56,7 @@ export default StyleSheet.create({
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0, 0, 0, 0.4)", // Adjust the alpha value for the desired transparency
+    backgroundColor: "rgba(0, 0, 0, 0.)", // Adjust the alpha value for the desired transparency
   },
   backgroundImage: {
     position: "absolute",

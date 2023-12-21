@@ -29,7 +29,6 @@
           
         </View>
 
-<<<<<<< HEAD
 
 
 
@@ -109,12 +108,3 @@ const localStyles = StyleSheet.create({
     shadowRadius: 12,
   },
 });
-=======
-         <View>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-            itaque, reiciendis ut ad illum neque cum quidem fuga? Ducimus amet
-            modi illo ad maxime sit eveniet dolore voluptatibus ex perspiciatis!
-          </Text>
-        </View>
->>>>>>> 2ad43e9579abebc683ac235f2d2c7657bb1918f9
